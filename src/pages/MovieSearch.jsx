@@ -42,7 +42,7 @@ const MovieSearch = () => {
           speedMultiplier={0.5}
         />
       ) : (
-        <div className="movies">
+        <div className="search-movies">
           <p>'{state}' 검색 결과</p>
           {searchMovies.map((item) => (
             <SearchMovieCard key={item.id} movie={item} />
