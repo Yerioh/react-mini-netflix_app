@@ -1,38 +1,220 @@
-.App {
-  text-align: center;
+body {
+  background-color: #212529 !important;
+  color: whitesmoke !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  height: 80px;
+  border-bottom: 1px solid black;
+  border-radius: 0 0 5px 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-nav {
+  display: flex;
+  gap: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-item {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+/* home */
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+/* banner - 혼자 한 것*/
+.banner2 {
+  width: 100%;
+  padding: 20px;
+}
+
+.banner2>h1 {
+  margin-bottom: 15px;
+}
+
+.banner2-item {
+  width: 100%;
+}
+
+.banner2-item>img {
+  width: 100%;
+  height: 600px;
+}
+
+.banner2-item-info {
+  width: 100%;
+  display: none;
+  padding: 10px;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 50%;
+}
+
+.banner2-item:hover>.banner2-item-info {
+  display: block;
+}
+
+/* banner - 수업 */
+.banner {
+  display: flex;
+  align-items: center;
+  height: 600px;
+}
+
+/* ::before : 가상선택자 - 존재하지 않은 요소를 존재하는 요소처럼 보여지게 하는 선택자*/
+.banner::before {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  content: '';
+  background: linear-gradient(to left, black, transparent);
+}
+
+.banner-info {
+  width: 40%;
+  margin-left: 40px;
+  z-index: 1;
+}
+
+/* movie-slide */
+.movie-slide {
+  margin: 25px 0;
+}
+
+/* moviecard */
+.moviecard {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+}
+.moviecard>a{
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.moviecard-info {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  display: none;
+}
+
+.moviecard:hover .moviecard-info {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* banner2 & moviecard genre */
+.genre {
+  display: flex;
+  gap: 5px;
+}
+
+/* movies */
+.movies>p {
+  margin: 10px 50px;
+}
+
+.search-moviecard {
+  display: flex;
+  border-top: 1px solid black;
+  margin: 10px 50px;
+  padding: 10px;
+}
+
+.search-moviecard-img {
+  margin-right: 30px;
+}
+
+.search-moviecard-img>img {
+  width: 35vh;
+  height: auto;
+  cursor: pointer;
+}
+
+.search-moviecard-info {
+  margin: 20px;
+}
+
+.search-moviecard-info>h1 {
+  cursor: pointer;
+}
+
+/* movie-detail */
+.movie-detail {
+  margin: 100px;
+  display: flex;
+  gap: 50px
+}
+
+.movie-detail-img {
+  width: 30%;
+}
+
+.movie-detail-img>img {
+  width: 100%;
+  height: auto;
+}
+
+.movie-detail-info {
+  width: 65%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.movie-detail-info>p {
+  font-size: 20px
+}
+.movie-review{
+  margin: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+/* review-card */
+.review-card{
+  width: 100%;
+  padding: 10px;
+  border: 5px double lightgray;
+}
+.review-card>h3{
+  text-decoration: underline;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* movies */
+.movies{
+  width: 100%;
+  display: flex;
+  padding: 20px;
+}
+.movies-sort{
+  width: 30%;
+  padding: 30px 100px;
+}
+.movies-cardbox{
+  width: 70%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.movies-cardbox-card{
+  width: 16rem;
+  cursor: pointer;
 }
